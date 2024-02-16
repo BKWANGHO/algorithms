@@ -4,14 +4,14 @@ public class ArrayTest {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int a = 3;
-        int[] arr = {2, 4, 6, 8, 10};
+        int[] score = {2, 4, 6, 8, 10};
 
-        System.out.println("arr의 길이 : " + arr.length);
+        System.out.println("score의 길이 : " + score.length);
 
-        for (int i = 0; i <arr.length; i++) {
-            System.out.println(arr[i]);
+        for (int i = 0; i <score.length; i++) {
+            System.out.println(score[i]);
         }
-        
+
 
 
 
