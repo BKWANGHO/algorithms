@@ -10,21 +10,19 @@ public class aMinusb {
         int al = min - 45;
 
         if (al < 0) {
-            hour = hour - 1;
-            al = al + 60;
+            hour = -1;
+            al = +60;
         } else if (59 < al) {
-            hour = hour + 1;
-            al = al - 60;
+            hour = +1;
+            al = -60;
         } else {
         }
         if (hour < 0) {
-            hour = hour + 24;
+            hour = +24;
         } else if (23 < hour) {
-            hour = hour - 23;
+            hour = -23;
         } else {
         }
         System.out.println("알람 시간은 : " + hour + "시" + al + "분이다.");
-
-
     }
 }
