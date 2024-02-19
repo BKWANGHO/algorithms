@@ -11,30 +11,39 @@ public class SevenDwarf {
             height[i] = sc.nextInt();
             sum += height[i];
         }
-        Arrays.sort(height);
-        int result = 0;
-        int num1 =0;
-        int num2 =0;
-        for (int i = 0; i < height.length; i++) {
-            for (int j = i + 1; j < height.length; j++) {
-
-                result = sum - height[i] - height[j];
-
-                if (result == 100) {
-                    num1 =i;
-                    num2 =j;
+//        Arrays.sort(height);
+        for(int i =0; i<height.length; i++){
+            for(int j=0; j<height.length; j++){
+                if(height[i]<height[j]){
+                int swap = height[i];
+                height[i] = height[j];
+                height[j] = swap;
                 }
             }
         }
-        for(int i=0;i<height.length; i++){
-            if(i == num1){
-            } else if (i == num2) {
-            }else {
-                System.out.println(height[i]);
+
+        int result = 0;
+        int num1 = 0;
+        int num2 = 0;
+        for (int i = 0; i < height.length; i++) {
+            for (int j = i + 1; j < height.length; j++) {
+                result = sum - height[i] - height[j];
+                if (result == 100) {
+                    num1 = i;
+                    num2 = j;
+                }
             }
         }
-
-//        20 7 23 19 10 15 25 8 13
-//        20 7 23 19 10 15 25 8 13
+        for (int i = 0;
+                i < height.length; i++)
+            if (i == num1){
+            }else if( i == num2) {
+            } else {
+                System.out.println(height[i]);
+            }
     }
 }
+//        20 7 23 19 10 15 25 8 13
+//        20 7 23 19 10 15 25 8 13
+
+
