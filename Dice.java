@@ -31,7 +31,5 @@ public class Dice {
             }
 
         System.out.println(reward);
-//        System.out.println(same);
-//        System.out.println(sameNumber);
     }
 }
