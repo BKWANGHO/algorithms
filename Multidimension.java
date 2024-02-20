@@ -68,5 +68,6 @@ public class Multidimension {
         avg2 /= stNum;
         return avg2;
     }
+
 }
 
