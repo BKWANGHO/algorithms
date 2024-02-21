@@ -3,70 +3,33 @@ import java.util.Scanner;
 public class Honey {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+//        int location = sc.nextInt();
 
-        //        int n = (int)Math.random()*10;
-//        int n = sc.nextInt();
-        int honeyCase = 2;
-        int bee1Sum = 0;
-        int bee2Sum = 0;
-        int honeysum =0;
-//        int[] honey = new int[n];
-        int[] honey = {9,9,4,1,4,9,9};
-        int bee1 = 0;
-        int bee2 = 6;
-//        int[] bee2 = new int[n];
+        int[] arr ={9,9,4,1,4,9,9};
 
-//        for (int i = 0; i < honey.length; i++) {
-//            honey[i] = sc.nextInt();
-//        }
-//        int[] bee1 = new int[n];
-
-//        for (int i=0;i<n;i++){
-
-        if (bee1 < honeyCase) {
-            for (int i=bee1+1; i < honeyCase+1; i++) {
-            if(bee1 ==bee2){
-            }else {
-                bee1Sum += honey[i];
-                }
-            }
-
-
-
-            System.out.println("1");
-        } else if (bee1> honeyCase) {
-            for (int i=bee1-1; i<honeyCase-1; i--){
-                if(bee1==bee2){
-                }else {
-                bee1Sum += honey[i];
-                }
-            }
-            System.out.println("2");
+        int bee1 =0;
+        int bee2 =0;
+        int honeyCase = 0;
+        int sumHoney = 0;
+        int max =0;
+        for(int i=0;i<arr.length;i++){
+//            arr [i]= sc.nextInt();
+            sumHoney +=arr[i];
         }
-//        }
-        if (bee2 < honeyCase) {
-            for (int i=bee2+1; i < honeyCase+1; i++) {
-                if(i ==bee1){
-                }else {
-                    bee2Sum += honey[i];
-                }
-            }
-            System.out.println("3");
-        } else  {
-            for (int i=bee2-1; i>honeyCase-1; i--){
-                if(bee1==bee2){
-                }else {
-                    bee2Sum += honey[i];
-                }
-            }
-            System.out.println("4");
+        System.out.println(sumHoney);
+        for(int i=0;i<arr.length;i++){
+//            arr [i]= sc.nextInt();
+            sumHoney =arr[i]-arr[bee2];
+            bee2++;
+            System.out.println(bee2);
+            if(max<sumHoney){
+                max = sumHoney;}
+            sumHoney=0;
         }
-        honeysum = bee1Sum +bee2Sum;
-        for (int i = 0; i < honey.length; i++) {
-            System.out.print(honey[i]+" ");
-        }
-        System.out.println();
-        System.out.println(bee1Sum + " + "+ bee2Sum + " = " +honeysum);
+
+        System.out.println("sumHoney" );
+        System.out.println("sumHoney" + max);
+
 
     }
 }

@@ -17,8 +17,8 @@ public class Jandon {
                     ji += a;
                 }
             }
-            System.out.println("지폐 수는 : " + ji);
         }
+            System.out.println("지폐 수는 : " + ji);
     }
 }
 
