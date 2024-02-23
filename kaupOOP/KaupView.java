@@ -19,7 +19,5 @@ public class KaupView {
         System.out.printf("키 : %.1fM, 몸무게 : %.1fkg, ", person.getHeight(), person.getWeight());
         System.out.printf("BMI : %.1f",bmi);
         System.out.println(" " + bodyMass+ "입니다.");
-
-
     }
 }

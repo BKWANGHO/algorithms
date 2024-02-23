@@ -4,32 +4,33 @@ public class Honey {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 //        int location = sc.nextInt();
-
-        int[] arr ={9,9,4,1,4,9,9};
-
-        int bee1 =0;
-        int bee2 =0;
-        int honeyCase = 0;
+        int[] arr = {9, 9, 4, 1, 4, 9, 9};
+        int bee2 = 0;
         int sumHoney = 0;
-        int max =0;
-        for(int i=0;i<arr.length;i++){
+        int max1 = 0;
+        int sum = 0;
+        int max2 = 0;
+
+        for (int i = 0; i < arr.length; i++) {
 //            arr [i]= sc.nextInt();
-            sumHoney +=arr[i];
-        }
-        System.out.println(sumHoney);
-        for(int i=0;i<arr.length;i++){
-//            arr [i]= sc.nextInt();
-            sumHoney =arr[i]-arr[bee2];
-            bee2++;
-            System.out.println(bee2);
-            if(max<sumHoney){
-                max = sumHoney;}
-            sumHoney=0;
+            sumHoney += (arr[i] * 2);
         }
 
-        System.out.println("sumHoney" );
-        System.out.println("sumHoney" + max);
-
+        for (int i = 0; i < arr.length; i++) {
+            int bee1 = sumHoney - (arr[0]) - (arr[i] * 2);
+            System.out.printf("bee1 : "+ bee1);
+            if (max1 < bee1) {
+                max1 = bee1;
+                for (int j = 1; j < i; j++) {
+                    sum += arr[j];
+                }
+                    System.out.println("sum : " + sum);
+            }
+        }
+                    max1 -= sum;
+        System.out.println();
+        System.out.println("sumHoney" + max1);
 
     }
 }
+
