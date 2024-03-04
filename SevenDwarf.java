@@ -22,20 +22,17 @@ public class SevenDwarf {
             }
         }
 
-        int result = 0;
         int num1 = 0;
         int num2 = 0;
         for (int i = 0; i < height.length; i++) {
             for (int j = i + 1; j < height.length; j++) {
-                result = sum - height[i] - height[j];
-                if (result == 100) {
+                if (sum - height[i] - height[j] == 100) {
                     num1 = i;
                     num2 = j;
                 }
             }
         }
-        for (int i = 0;
-                i < height.length; i++)
+        for (int i = 0;i < height.length; i++)
             if (i == num1){
             }else if( i == num2) {
             } else {

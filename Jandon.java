@@ -5,20 +5,17 @@ public class Jandon {
         Scanner sc = new Scanner(System.in);
         int price = sc.nextInt();
 
-        int jandon = 1000 - price;
-        int a = 0;
-        int ji = 0;
+        int changeMoney = 1000 - price;
+        int paperMoney = 0;
         int arr[] = {500, 100, 50, 10, 5, 1};
         for (int i = 0; i < arr.length; i++) {
-            for (int j = 1; j < 10; j++) {
-                if (jandon / arr[i] != 0) {
-                    a = jandon / arr[i];
-                    jandon -= (arr[i] * a);
-                    ji += a;
-                }
+            if (changeMoney / arr[i] != 0) {
+                int temp = changeMoney / arr[i];
+                changeMoney -= (arr[i] * temp);
+                paperMoney += temp;
             }
         }
-            System.out.println("지폐 수는 : " + ji);
+        System.out.println(paperMoney);
     }
 }
 
